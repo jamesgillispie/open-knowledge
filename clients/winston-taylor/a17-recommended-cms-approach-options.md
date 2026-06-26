@@ -1,0 +1,49 @@
+---
+type: concept
+title: "A17 + Recommended CMS Approach: Options"
+description: Narrative AREA 17 write-up of why Laravel Twill is the recommended CMS approach for Winston Taylor.
+tags:
+  - client
+  - winston-taylor
+  - area17
+---
+# CMS Evaluation: Why We Recommend Laravel Twill
+
+*Project Meridian | AREA 17 Technical Direction | February 2026*
+
+We've spent the past few weeks in discovery with both firms, gathering requirements, auditing the existing platforms, and mapping out what the Winston Taylor website needs to do on Day 1 and what it needs to be capable of doing a year from now. Based on what we've gathered, we evaluated three CMS platforms and we're recommending Twill on Laravel. What follows is the reasoning, including why we looked at Optimizely and Payload and why Twill is the strongest fit against this project's specific requirements.
+
+The requirements themselves are pretty clear. Both firms need editorial control and self-service CMS capabilities, flexible templates with modular content blocks, integration with existing systems on both sides (Vuture and OnePlace for TW, Nexl and Foundation for WS), multilingual support, AI search and personalization post-launch, security and governance that works across two IT teams, AEO readiness for the MVP, robust media handling with bulk operations, content tagging and taxonomy, WCAG AA accessibility, and a platform where development and coding is universal, not niche. The brief was explicit about that last point. All of this against a May 1 hard deadline that's tied to the merger announcement and the verein separation.
+
+We evaluated three platforms that each represent a different architectural approach: Twill on Laravel (open source, composable, A17-maintained), Optimizely (enterprise digital experience platform, SaaS), and Payload CMS (headless, Next.js and MongoDB, open source). Each one is a legitimate platform. The question is which one fits this project best.
+
+Optimizely is a strong enterprise DXP with bundled capabilities and solid editorial tooling out of the box. It came up in the brief as a platform of interest, and we took that seriously. The challenge is fit. Optimizely's procurement cycle runs 4-8 weeks minimum once you factor in license negotiation, contract review, and certified partner coordination. Pricing starts around $36K annually and scales well above $200K for a deployment at this content scale, on multi-year auto-renewing contracts with proprietary content schemas. The integration model assumes you're buying deeper into the Optimizely ecosystem over time, which creates the kind of vendor dependency both firms' discovery responses suggested they want to avoid. Both IT teams described a preference for an agency-managed operating model rather than a vendor-managed DXP, and the timeline simply doesn't accommodate the procurement process. It's not that Optimizely can't do the work, it's that the path to getting started is incompatible with May 1, and the contract structure introduces dependencies that run counter to what both firms described.
+
+Payload is a modern headless CMS built on Next.js and MongoDB, and it's a platform A17 has real production experience with (we're actively building on it for another client). It's open source, the developer experience is strong, and it's been gaining traction in the CMS space for good reason. The gap is specific to this project's requirements. Payload is headless-first, which means achieving the kind of editorial experience both teams described (flexible templates, modular blocks, self-service content management, media library with bulk operations) requires more custom frontend development than a platform where those workflows are built in. The content model for this project is deeply relational, thousands of professional profiles cross-referenced with capabilities, offices, sectors, insights, and multilingual variants. PostgreSQL handles that kind of structured, taxonomy-heavy data more naturally than MongoDB. And while A17 can deliver on Payload, our deepest institutional knowledge, our production tooling, our design system (Vitrine), and the largest body of shipped work at this scale all live in the Twill/Laravel ecosystem. Payload is a strong platform with a growing ecosystem. For this project's specific content architecture and the operating model both firms want, Twill is a better match.
+
+Which brings us to Twill, and why it's well-positioned against the requirements.
+
+Twill's core strength is exactly what this project demands: structured content modeling for editorial-heavy, taxonomy-driven sites. Professional directories, capability pages, multilingual content with regional variations, high-volume publication workflows, these are the use cases Twill was designed for. The block editor gives editorial teams the flexible, modular templating the brief described. The media library supports bulk operations, responsive cropping, and image optimization natively. Role-based access control and editorial approval workflows handle the governance requirements across two teams. And because Twill is open source (BSD-2-Clause, on Laravel which is MIT), there's no procurement cycle, no license negotiation, no contract to finalize before work begins. The dev environment goes up the day the stack is approved.
+
+The architecture is composable, which matters as much for post-launch as it does for the MVP. The CMS handles content modeling and editorial workflows, but search, media delivery, CRM routing, consent management, and analytics are each handled by dedicated services connected through an orchestration layer that A17 builds and you own. For the MVP, that means Meilisearch for search (self-hosted, no SaaS procurement), Twill's native media library with WebP optimization via Bunny CDN, centralized form handling that routes to each firm's CRM through Laravel's queue system, and hosting on Upsun Dedicated with the contract passing through A17. External SaaS dependencies at launch are just Cloudflare and Siteimprove, both already in use.
+
+Phase 2 is where composable pays for itself. The data model and index schema are designed with Algolia in mind from Day 1, so migrating from Meilisearch to Algolia (with AI-powered search and analytics) is a driver swap, not a rearchitecture. The media library is abstracted so a DAM like Bynder plugs in by changing where the service points. Each new capability goes through its own procurement cycle at the point of adoption, not before launch. The roadmap both firms described maps directly onto this:
+
+* Algolia with AI-powered natural language search (both firms flagged as high priority)
+* DAM integration when asset volume and cross-firm publishing justify it
+* Deeper CRM integration, potentially consolidated across firms
+* Multilingual expansion (WS would prioritize Spanish and Portuguese)
+* Content personalization and experimentation
+* Content syndication and distribution automation
+
+None of those require changing the CMS or renegotiating a vendor contract.
+
+On AI readiness specifically, both firms raised this in discovery and it's worth calling out. WS wants to prioritize answer engine optimization over traditional SEO. TW described AI-enhanced search and personalization as near-term goals. Server-side rendered pages with structured data are exactly what AI agents need to consume (no client-side JavaScript assembly required for content to be indexable). Laravel's middleware layer can route requests through any AI service with an API. The content hub pages both Holly and Mark described for emerging topics (AI regulation, COVID response, the Crown Act) are a Day 1 architecture feature, not a Phase 2 request. The content model supports ad-hoc tagging and dynamic aggregation natively, and the structured data layer makes that content immediately available to answer engines.
+
+On lock-in: Twill doesn't create it. The content model is defined in code that A17 writes and you own. Data lives in PostgreSQL with a standard schema. The editorial workflows, the block editor, the media library, the taxonomy system are all built on Laravel (one of the most widely adopted PHP frameworks in the world). If circumstances change, the technology is transferable. Data exports cleanly, the content model is documented, the frontend is standard web technology. A17 will continue as the technology partner, that's the plan, but the architecture doesn't require it. That's a principle we build around.
+
+A17 created Twill, maintains it, and has deployed it across a range of clients and project types with comparable content complexity. We've shipped production work on it for years. Twill isn't A17-only, it's open source with an active community used by other agencies and development teams. Laravel itself has one of the largest developer ecosystems in PHP. The codebase is public on GitHub. The brief asked for development that's universal, not niche. That's what this is.
+
+The operating model both firms described (A17 owns hosting, manages the deployment pipeline, handles infrastructure, continues under maintenance retainer) is exactly how we deliver Twill projects. The hosting decision, the CI/CD pipeline, the monitoring, the security posture, these are one relationship, one team, accountable for the whole thing. That's what both firms said they wanted.
+
+Twill isn't the only good CMS out there. Optimizely and Payload are both legitimate platforms that serve their markets well. But against this project's specific requirements, timeline, and operating model, Twill is the clearest fit. It ships by May 1, the composable architecture grows with the firm rather than constraining it, there's no lock-in or multi-year contract, and it's maintained by the same team that will build, host, and support the site. That's the recommendation, and we're making it with confidence.
