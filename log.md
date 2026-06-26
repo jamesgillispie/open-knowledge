@@ -2,6 +2,10 @@
 
 Change history for this knowledge base, newest entry first. Add a dated entry (`## YYYY-MM-DD: <summary>`) whenever you create, edit, or restructure content — one entry per working session, not per file.
 
+## 2026-06-26: Add weekly recap for Jun 22–26, 2026
+
+Added `notes/weekly/2026-06-26-recap.md` — drawn from 13 Granola calls covering the NASEM 32-ticket Growth 28.01 release, Getty/PST 2030 proposal prep (due June 30), Millennium Management finalist round (Rosanna call targeting July 6), Paris leadership summit (pod model, skill matrix, engineering board, responsible AI policy), and vendor evaluations for Nexus, Snowflake/Pliable, Claude Tag, and FTZ/GTM.
+
 ## 2026-06-26: Add the Theses Under Test ledger — the wiki's calibration spine
 
 Added a forward-looking, falsifiable-bet layer to complement the descriptive corpus (people/clients/projects/concepts). The idea: record the strategic calls already latent in the notes as scored, grounded, self-grading theses.
