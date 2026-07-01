@@ -39,6 +39,7 @@ tags:
 ## Scorecard
 
 - **2026-06-26** — Opened at 65%. The strongest *personal* evidence (my own trajectory) is also the most selection-biased. The honest test isn't "does this feel true" — it's whether, a year out, the generalists around me are visibly *gaining* ground on specialists in AI-saturated work, or just telling themselves a good story.
+- **2026-07-01** — Indirect supporting signals; no market-level confirmation yet. George's SXSW behavioral branding talk (Jun 26 recap) reframes AI competition around evidence vs. expression — brand value accrues to the layer requiring judgment, not surface generation — which is conceptually adjacent. The Snap/USCC project (Jun 1–5 recap) models the generalist-as-integrator concretely: James at 10–25% as technical advisor authoring the design system and prompts, while Claude Code executes as scoped specialist; the integration role is the scarce one. AREA 17 is also moving to cross-functional pods (strategy + technology + engineering), structurally rewarding cross-domain judgment. Pentagram asking "how much of this was built with AI?" (Jun 20 recap) is the first data point on AI-provenance becoming a procurement question. None of this is a market-level verdict — the honest test is whether generalists are *measurably* gaining ground on specialists a year out. Nothing in the Granola record directly addresses that question; confidence held at 65%.
 
 ## What this feeds
 

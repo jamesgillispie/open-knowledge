@@ -38,6 +38,7 @@ The traffic mix has flipped and the platform can't keep up with it:
 ## Scorecard
 
 - **2026-06-26** — Opened at 70%. The direction is already in motion on two projects, so the *decision* is largely made; what's genuinely under test is whether the **economics and incident rate actually improve** once the migrations land. Post-Tuesday bot-blocking work is the first data point.
+- **2026-07-01** — Diagnosis confirmed in depth; outcome data still pending. The May 25–29 recap documented the NASAM bot crisis in full: 80TB bandwidth against a 1TB contract, 90% bot traffic, overages blindsiding the client, and mitigation stuck at whack-a-mole VCL tickets through Fastly support. The Jun 15 Nascent learnings meeting confirmed the structural problem: Fastly's dedicated bot management product is not available as a sellable add-on on Nascent's current Upsun plan — removing the cleanest fix without decoupling. Both Nascent and NASAM formally decided to decouple (Jun 20 recap). The bot-attack that interrupted the Jun 26 Snowflake/Pliable call is a reminder that the problem is ongoing. The case for decoupling is stronger, but neither migration has completed and no post-decoupling cost data exists yet; confidence held at 70% pending outcome evidence.
 
 ## What this feeds
 

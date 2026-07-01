@@ -3,7 +3,7 @@ type: thesis
 title: Sprints can't build complex platforms
 description: Time-boxed sprints structurally fail deeply-interdependent platforms; they need a retainer / lead-dev model. AREA 17's commercial default is mismatched to its hardest work.
 status: open
-confidence: 60
+confidence: 65
 opened: 2026-06-26
 horizon: 2026-12-31
 tags:
@@ -43,6 +43,7 @@ The work shape pulls toward retainers; the **commercial pull goes the other way*
 ## Scorecard
 
 - **2026-06-26** — Opened at 60%. Lower confidence than the others *on purpose*: the engineering evidence is strong, but the bet is really a claim about the **commercial model**, where I have less control and the counter-pressure is real. The converted care-budget sprints are the natural experiment — watch them.
+- **2026-07-01** — The natural experiment is running and producing supportive data. The NASEM Growth 28.01 release on June 23 (Jun 26 recap) was the largest in project history at 32 branches, and delivered the predicted late-stage crunch: three tickets (1433, 1435, 1418) held back due to unapproved feature dependencies, a hard merge conflict requiring a specific engineer (Eric) to resolve, and a DNS/DMARC blocker stuck on client ITS. The Jun 26 recap also shows a pre-prod environment proposal raised immediately afterward — a direct symptom of sprint-induced regression confusion when non-technical clients review on staging. Nascent's recap (Jun 20) stated the thesis plainly: the project "really needs a full-time retainer lead dev rather than sprint-based work," with a ~30-branch release behaving like a fourth full launch. The Nasim project (Jun 4 meeting, Jun 6 recap) showed the same pattern — 73 hours remaining, extended again. The care-budget-to-six-week-sprint conversions for NASAM and Pentagram are now in progress (Jun 29 meeting); the NASAM sprint is scoped at $80k over two three-week cycles. The next six weeks are the real falsification window — if those sprints ship cleanly, confidence should drop; confidence 60% → 65%.
 
 ## What this feeds
 

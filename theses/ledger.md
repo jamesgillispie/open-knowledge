@@ -34,10 +34,10 @@ stateDiagram-v2
 
 | Thesis | Conf. | Review by | Status |
 | --- | :---: | --- | --- |
-| [Bounded agents beat autonomy](./bounded-agents-beat-autonomy.md) — the harness is the moat | 75% | 2026-12-31 | open |
+| [Bounded agents beat autonomy](./bounded-agents-beat-autonomy.md) — the harness is the moat | 80% | 2026-12-31 | open |
 | [Decouple the CDN from the platform](./decouple-cdn-from-platform.md) | 70% | 2026-09-30 | open |
 | [The generalist's edge compounds](./the-generalist-edge-compounds.md) *(keystone)* | 65% | 2027-06-30 | open |
-| [Sprints can't build complex platforms](./sprints-cant-build-complex-platforms.md) *(contested)* | 60% | 2026-12-31 | open |
+| [Sprints can't build complex platforms](./sprints-cant-build-complex-platforms.md) *(contested)* | 65% | 2026-12-31 | open |
 
 ```html preview h=220px
 <div style="font-family:system-ui;padding:18px 4px;color:var(--foreground)">
@@ -45,8 +45,8 @@ stateDiagram-v2
   <div style="display:flex;flex-direction:column;gap:10px">
     <div style="display:flex;align-items:center;gap:10px">
       <div style="width:200px;font-size:13px">Bounded agents beat autonomy</div>
-      <div style="flex:1;height:18px;background:var(--muted);border-radius:var(--radius);overflow:hidden"><div style="width:75%;height:100%;background:var(--chart-1)"></div></div>
-      <div style="width:40px;font-size:13px;text-align:right">75%</div>
+      <div style="flex:1;height:18px;background:var(--muted);border-radius:var(--radius);overflow:hidden"><div style="width:80%;height:100%;background:var(--chart-1)"></div></div>
+      <div style="width:40px;font-size:13px;text-align:right">80%</div>
     </div>
     <div style="display:flex;align-items:center;gap:10px">
       <div style="width:200px;font-size:13px">Decouple CDN from platform</div>
@@ -60,8 +60,8 @@ stateDiagram-v2
     </div>
     <div style="display:flex;align-items:center;gap:10px">
       <div style="width:200px;font-size:13px">Sprints can't build platforms</div>
-      <div style="flex:1;height:18px;background:var(--muted);border-radius:var(--radius);overflow:hidden"><div style="width:60%;height:100%;background:var(--chart-4)"></div></div>
-      <div style="width:40px;font-size:13px;text-align:right">60%</div>
+      <div style="flex:1;height:18px;background:var(--muted);border-radius:var(--radius);overflow:hidden"><div style="width:65%;height:100%;background:var(--chart-4)"></div></div>
+      <div style="width:40px;font-size:13px;text-align:right">65%</div>
     </div>
   </div>
 </div>
