@@ -3,7 +3,7 @@ type: thesis
 title: Bounded agents beat autonomy — the harness is the moat
 description: In production agency work, narrowly-scoped, revocable agents will out-deliver free-roaming autonomous ones; the firms that win with AI got the harness right, not the model.
 status: open
-confidence: 75
+confidence: 80
 opened: 2026-06-26
 horizon: 2026-12-31
 tags:
@@ -38,6 +38,7 @@ Every experiment that has actually stuck at AREA 17 fits the bounded pattern, an
 ## Scorecard
 
 - **2026-06-26** — Opened at 75%. Evidence is strong but internal-only; nothing here has been load-bearing on a *client-facing* deliverable yet. The bet is really "will this survive contact with client work," and that test hasn't run.
+- **2026-07-01** — The bounded-agent pattern is extending from internal R&D into client-facing delivery. The Snap/USCC hackathon project (Jun 1–5 recap, May 25–29 recap) positions AREA 17 as harness author — design system + prompt guidelines as canonical context — while Claude Code executes as a scoped agent; the client runs the agent, AREA 17 owns the harness. The Jun 25 "Composable architecture" meeting showed the BD automation concept (Claude Tag in Slack) explicitly requiring a governance gate before autonomous operation, with ops check-ins as the human-in-the-loop. The Paris leadership summit (Jun 26 recap) codified the governing principle as company policy: no unreviewed AI output to be sent externally. The thesis's key unknown — whether bounded agents survive contact with client work — is starting to resolve in their favor; confidence 75% → 80%.
 
 ## What this feeds
 
